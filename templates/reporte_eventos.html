@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<header><h1>Defunciones</h1></header>
+	<center>
+		<table class="table table-hover">
+		<thead>
+			<tr>
+				<td><b>Fecha</b></td>
+				<td><b>Lugar</b></td>
+				<td><b>Personal</b></td>
+				<td><b>Hora</b></td>
+			</tr>
+		</thead>
+		<tbody>
+		{% for item in object_list %}
+			<tr>
+				<td>{{ item.Fecha_evento }}</td>
+				<td>{{ item.Lugar_evento }}</td>
+				<td>{{ item.Personal_evento }}</td>
+				<td>{{ item.Hora_evento }}</td>
+				<td><a class="btn btn-primary" href="/editar_evento/{{ item.pk }}" role="button">Editar</a>
+				<a class="btn btn-primary" href="/detalle_evento/{{ item.pk }}" role="button">Ver detalles</a></td>
+			</tr>	
+		{% endfor %}
+		</tbody>
+	</table>
+	</center>
+{% endblock %}

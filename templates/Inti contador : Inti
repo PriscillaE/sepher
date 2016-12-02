@@ -1,0 +1,19 @@
+Inti contador : Inti
+: 0 = contador
+
+
+: 1 = contador
+. $
+Fpr ( ) $ : [ < ] $ 9 : $ + +  ( ) Fpr
+
+Fpr ( ) contador : [ < ] contador 9 : contador + +  ( ) Fpr
+
+
+cas 10 . . 
+' p  ' : ' primer caso '
+Breaki ,
+cas 6 . . 
+printi : ' segundo caso '
+Breaki ,
+Defaulti . [ aux1 ] . ' error '
+Breaki : : 

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+<header><h1>Pacientes</h1></header>
+	<center>
+		<table class="table table-hover">
+		<thead>
+			<tr>
+				<td><b>Nombre</b></td>
+				<td><b>Apellidos</b></td>
+				<td><b>Fecha de nacimiento</b></td>
+				<td><b>Diagnóstico</b></td>
+				<td><b>Clínica</b></td>
+				<td><b>Padre/Tutor</b></td>			
+				<td><b>Contacto (Teléfono) </b></td>
+				<td><b>Estado de salud</b></td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>{{ list.Paciente_nombre }}</td>
+				<td>{{ list.Paciente_apellido }}</td>
+				<td>{{ list.Paciente_fnacimiento }}</td>
+				<td>{{ list.Paciente_diagnostico }}</td>
+				<td>{{ list.Paciente_clinica }}</td>
+				<td>{{ list.Tutor_Padre }}</td>
+				<td>{{ list.Paciente_contacto }}</td>
+				<td>{{ list.Estado_salud }}</td>
+			</tr>	
+		</tbody>
+	</table>
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<td><b>Fecha</b></td>
+				<td><b>Diagnostico</b></td>
+			</tr>
+		</thead>
+		<tbody>
+		{% for item in list2 %}
+			<tr>
+				<td>{{ item.Fecha }}</td>
+				<td>{{ item.Diagnostico }}</td>
+			</tr>	
+		{% endfor %}
+		</tbody>
+	</table>
+	</center>
+{% endblock %}

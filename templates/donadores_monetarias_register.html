@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Donadores Monetarias register{% endblock %}
+{% block content %}
+<br>
+<!--
+	{% for item in list %}
+		<h5>Nombre: __{{ item.nombre_bailarin}}__</h5>
+		<h5>Apellido Paterno: __{{ item.apellido_paterno_bailarin}}__</h5>
+		<h5>Apellido Materno: __{{ item.apellido_materno_bailarin}}__</h5>
+		<h5>Edad: __{{ item.edad_bailarin}}__</h5>
+		<h5>Especialidad: __{{ item.curso}}__</h5>
+		<h5>Horario Trabajo: __{{ item.horario_ensayo}}__</h5>
+		<br>
+	{% endfor %}
+	-->
+<form class="col-md-4 col-sm-offset-4" method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{ form.as_p}}
+		<br>
+			<center><button type="submit" class="btn btn-primary">Guardar</button>
+			<button type="submit" class="btn btn-warning">Limpiar</button></center>
+
+	</form>
+{% endblock %}

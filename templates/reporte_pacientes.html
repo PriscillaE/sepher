@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+<header><h1>Pacientes</h1></header>
+	<center>
+		<table class="table table-hover">
+		<thead>
+			<tr>
+				<td><b>Nombre</b></td>
+				<td><b>Apellidos</b></td>
+				<td><b>Fecha de nacimiento</b></td>
+				<td><b>Diagnóstico</b></td>
+				<td><b>Clínica</b></td>
+				<td><b>Padre/Tutor</b></td>			
+				<td><b>Contacto (Teléfono) </b></td>
+				<td><b>Estado de salud</b></td>
+				<td><b></b></td>
+			</tr>
+		</thead>
+		<tbody>
+		{% for item in object_list %}
+			<tr>
+				<td>{{ item.Paciente_nombre }}</td>
+				<td>{{ item.Paciente_apellido }}</td>
+				<td>{{ item.Paciente_fnacimiento }}</td>
+				<td>{{ item.Paciente_diagnostico }}</td>
+				<td>{{ item.Paciente_clinica }}</td>
+				<td>{{ item.Tutor_Padre }}</td>
+				<td>{{ item.Paciente_contacto }}</td>
+				<td>{{ item.Estado_salud }}</td>
+				<td><a class="btn btn-primary" href="/editar_paciente/{{ item.pk }}" role="button">Editar</a>
+				<a class="btn btn-primary" href="/detalle_paciente/{{ item.pk }}" role="button">Historial</a></td>
+			</tr>	
+		{% endfor %}
+		</tbody>
+	</table>
+	</center>
+{% endblock %}

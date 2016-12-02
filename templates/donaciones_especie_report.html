@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Reporte{% endblock %}
+{% block content %}
+<br>
+
+<div class="container">
+  <h2>Reporte Donaciones Especie</h2>
+  <br>
+  <table class="table table-condensed"">
+  
+    <thead>
+      <tr>
+        <th>Fecha </th>
+        <th>Donador </th>
+        <th>Descripcion </th>
+        <th>Unidades </th>
+        <th>Cantidad </th>
+      </tr>
+    </thead>
+    {% for item in object_list %}
+    <tbody>
+    
+    <tr>
+		<td>{{item.Fecha}}</td>
+		<td>{{item.Donador}}</td>
+    <td>{{item.Descripcion }}</td>
+    <td>{{item.Unidades }}</td>
+    <td>{{item.Cantidad }}</td>
+    <td><a class="btn btn-success" href="/editar_donaciones_especie/{{ item.pk }}" role="button">Editar</a>
+    
+	</tr>
+    {% endfor %}
+  </table>
+
+
+{% endblock %}

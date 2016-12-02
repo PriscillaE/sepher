@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<header><h1>Pacientes</h1></header>
+	<center>
+		<table class="table table-hover">
+		<thead>
+			<tr>
+				<td><b>Fecha reunión</b></td>
+				<td><b>/b></td>
+			</tr>
+		</thead>
+		<tbody>
+		{% for item in object_list %}
+			<tr>
+				<td>{{ item.Fecha_reunion }}</td>
+				<td><a class="btn btn-primary" href="/detalle_minuta/{{ item.pk }}" role="button">Editar</a></td>
+			</tr>	
+		{% endfor %}
+		</tbody>
+	</table>
+	</center>
+{% endblock %}
+

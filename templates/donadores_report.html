@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}Eliminar{% endblock %}
+{% block content %}
+<br>
+
+<div class="container">
+  <h2>Eliminar Donador</h2>
+  <br>
+  <table class="table table-condensed"">
+  
+    <thead>
+      <tr>
+        <th>Nombre </th>
+        <th>Correo </th>
+        <th>Telefono</th>
+      </tr>
+    </thead>
+    {% for item in object_list %}
+    <tbody>
+    
+    <tr>
+		<td>{{item.Donador_nombre}}</td>
+		<td>{{item.Donador_correo}}</td>
+    <td>{{item.Donador_tel }}</td>
+    <td><a class="btn btn-danger" href="/eliminar_donador/{{ item.pk }}" role="button">Eliminar</a>
+    
+	</tr>
+    {% endfor %}
+  </table>
+
+
+{% endblock %}

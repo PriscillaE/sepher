@@ -1,0 +1,151 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+	<head>
+		<title>Fundación SEPHER</title>
+		<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+
+
+
+	</head>
+	
+	<body>
+    <style>
+.footer {
+  /* bottom: auto; */
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  padding-top: 35px;
+  }
+
+a {
+  text-decoration: none;
+      text-decoration: none !important;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    color: #333;
+}
+
+
+      th {
+         padding: 7px;
+        }
+        td {
+         padding: 8px;
+        }
+</style>
+
+  <header>
+	
+    <div>
+      <header role="banner">
+        <div class="inner-wrapper">
+        <h1><center><a href="/"><img src="{% static 'img/logosepher.png' %}" width="318px" height="107px"></a></h1>
+        </div> 
+      </header>
+
+      <nav class="nav navbar" style="background-color:#ffffff" role="navigation">
+      <center>
+      <div class="inner-wrapper" style="width:940.45px; margin:0px auto; border:0px solid #000; background-color:#F57F20;">
+      <div class="container" >-
+        <ul class="nav navbar-nav" style=" font-family: Bebas Neue; font-size: 16px;">
+          <div class="w3-display-topleft w3-padding-jumbo w3-xlarge">
+    
+    
+  </div>
+          <li role="presentation"  ><a style="color:white;" href="/"><span class="glyphicon glyphicon-home"></span></a></FONT></li>
+          
+            <li class="dropdown">
+               <a class="dropdown-toggle" data-toggle="dropdown" style="color:white;" href="#">Minutas
+               <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/Mision">Nueva Minuta</a></li>
+                    <li><a href="/Historia">Reporte</a></li>
+                  </ul>
+            </li>
+              <li class="dropdown">
+               <a class="dropdown-toggle" data-toggle="dropdown" style="color:white;" href="#">Pacientes
+               <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/Mision">Nuevo Paciente</a></li>
+                    <li><a href="/Historia">Reporte</a></li>
+                    <li><a href="/Historia">Apoyo Economico</a></li>
+                    <li><a href="/Historia">Historial Medico</a></li>
+                  </ul>
+            </li>
+              <li class="dropdown">
+               <a class="dropdown-toggle" data-toggle="dropdown" style="color:white;" href="#">Donaciones
+               <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/Mision">Nuevo Donacion</a></li>
+                    <li><a href="/Historia">Reporte</a></li>
+
+                  </ul>
+            </li>
+            <li class="dropdown">
+               <a class="dropdown-toggle" data-toggle="dropdown" style="color:white;" href="#">Eventos
+               <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/Mision">Nuevo Evento</a></li>
+                    <li><a href="/Historia">Calendario</a></li>
+
+                  </ul>
+         
+
+          
+        </ul>
+      </div>
+      </div>
+      </center>
+      </nav>
+
+
+
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        {% block content %}
+    {% endblock %}
+      </div>
+    </div>
+    
+  </div>
+
+
+<section id="footer" style="padding-top: 35px;  background-color: #40647c">
+            <div class="container"  style="width:940.45px;   background-color: #40647c">
+                <div class="row">
+                    <div class="col-md-12 text-center bottom">
+                    
+                       
+                        <p align="center" style="font-family: Bebas Neue; font-size: 14px;"><b>Fundación Sebastian de la Peña Hernandez A.C.</b>.</p>
+                        <br>
+                         <div class="collapse navbar-collapse" id="myNavbar">
+   <ul class="nav navbar-nav navbar-left">
+       <li><a href="/"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+       <li><a href="/"><span class="glyphicon glyphicon-log-out"></span> Login</a></li></ul></div>
+                    
+                        <hr>
+                       
+                    </div>
+                    
+
+
+                
+                    
+                    <div class="col-md-12 text-center bottom">
+                        <p>Copyright © 2016 Codeniner. All rights reserved.</p>
+                    </div>
+               
+            </div>
+        </section>
+
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+
+	</body>
+</html>
